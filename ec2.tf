@@ -1,8 +1,6 @@
 module "ec2" {
     source = "../terraform-aws-instance"
-    sg_ids = ["sg-07079be90cc08029e"]
-
-    tags = {
-        Name = "robosshop-cart"
-    }
-}
+    sg_ids = var.security_group_ids
+    instance_type = "t3.medium"
+    tags = var.tags
+}    
