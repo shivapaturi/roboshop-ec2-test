@@ -9,3 +9,7 @@ variable "tags" {
         Environment = "dev"
     }
 }
+
+variable "instance_type" {
+    default = "t3.small"
+}
